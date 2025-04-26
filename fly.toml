@@ -16,7 +16,7 @@ primary_region = 'hkg'
   min_machines_running = 1
   processes = ['app']
 
-[[vm]]
-  cpu_kind = 'shared'
-  cpus = 2
-  memory_mb = 4096
+  [services.concurrency]
+    type       = "connections"
+    soft_limit = 99999
+    hard_limit = 9999999999
