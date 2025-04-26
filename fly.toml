@@ -8,16 +8,16 @@ primary_region = 'hkg'
 
 [build]
 
-[[services]]
+[http_service]
   internal_port        = 3000
-  protocol             = "tcp"
   force_https          = true
   auto_start_machines  = true
   auto_stop_machines   = false
   min_machines_running = 1
   processes            = ["app"]
 
-  [services.concurrency]
+  [http_service.concurrency]
     type       = "connections"
     soft_limit = 99999
     hard_limit = 9999999999
+
