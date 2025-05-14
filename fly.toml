@@ -19,5 +19,5 @@ primary_region = 'hkg'
   [http_service.concurrency]
     type       = "connections"
     soft_limit = 99999
-    hard_limit = 9999999999
+    hard_limit = 99999
 
